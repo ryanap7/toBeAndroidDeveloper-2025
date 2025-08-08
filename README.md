@@ -1,4 +1,4 @@
-# 📱 toBeAndroidDeveloper-2025
+# 📱 To Be Android Developer
 
 A complete roadmap to become a professional **Android Native Developer** using **Kotlin** in 2025.  
 This repository helps you learn everything from fundamentals to advanced topics, following **industry standards and best practices**.
