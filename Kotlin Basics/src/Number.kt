@@ -1,5 +1,3 @@
-@Suppress("MISSING_DEPENDENCY_SUPERCLASS_IN_TYPE_ARGUMENT")
-
 fun main() {
 
     // === Integer Numbers ===
