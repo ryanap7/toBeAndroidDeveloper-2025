@@ -1,7 +1,8 @@
 fun main() {
-    // When Expression
-    // The 'when' expression in Kotlin is a versatile replacement for the 'switch' statement in other languages.
-    // It can be used to check a value against multiple conditions, group cases, use ranges, check type, or even replace if-else chains.
+    // === When Expression in Kotlin ===
+    // Definition:
+    // 'when' is a versatile replacement for 'switch' statements.
+    // It can match values, group cases, check ranges, test types, or replace if-else chains.
 
     val grade: Char = 'A'
 
@@ -20,7 +21,7 @@ fun main() {
         else -> println("Status: Not Passed")
     }
 
-    // 3. Using 'in' and '!in' to check for membership in a collection or range
+    // 3. Using 'in' and '!in' to check membership in a collection or range
     val passValues: Array<Char> = arrayOf('A', 'B', 'C')
     when (grade) {
         in passValues -> println("Passed using 'in'")
@@ -28,19 +29,20 @@ fun main() {
     }
 
     // 4. Using 'is' and '!is' to check type
-    val name = "Ryan"
-    when (name) {
+    when (val name = "Ryan") {
         is String -> println("Name is a String: $name")
         !is String -> println("Not a String")
     }
 
-    // 5. Using 'when' without a subject — works like an if-else chain
+    // 5. Using 'when' without a subject — acts like an if-else chain
     when {
         grade in passValues -> println("Condition-based Passed")
         else -> println("Condition-based Not Passed")
     }
 
-    // Note:
-    // - 'when' can return a value just like 'if' expression
-    // - 'when' is more readable than multiple if-else statements when checking multiple conditions
+    // === Notes & Tips ===
+    // - 'when' can be used as an expression and return a value.
+    // - It improves readability over multiple if-else statements.
+    // - Use 'when' for matching single values, ranges, types, or complex conditions.
+    // - 'else' branch is required unless all cases are covered.
 }

@@ -1,5 +1,4 @@
 fun main() {
-
     // === Integer Numbers ===
     // Byte: 8-bit signed integer (-128 to 127)
     val age: Byte = 27
@@ -48,5 +47,11 @@ fun main() {
 
     // === Output ===
     // Prints the Long value stored in 'balance' to the console
-    println(balance)
+    println(balance) // Output: 1000000
+
+    // === Notes & Tips ===
+    // - Use the smallest numeric type that fits your data to optimize memory usage.
+    // - Remember to append 'L' for Long literals and 'F' for Float literals.
+    // - Use underscores (_) in numeric literals for better readability.
+    // - Kotlin requires explicit conversion between numeric types; no implicit widening.
 }

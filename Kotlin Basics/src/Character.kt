@@ -1,12 +1,17 @@
 fun main() {
     // === Character (Char) Type ===
-    // 'Char' is used to store a single character.
-    // Characters are enclosed in single quotes: 'A', '1', '?', etc.
-    // Kotlin's Char is a 16-bit Unicode character, meaning it can represent any Unicode symbol.
+    // Definition:
+    // 'Char' is a data type that stores a single character.
+    // Characters are enclosed in single quotes, for example: 'A', '1', '?'.
+    // Kotlin's Char uses 16-bit Unicode, so it can represent any Unicode character.
 
-    val char: Char = '?' // This stores the question mark character
+    val char: Char = '?' // Store the question mark character
 
     // === Output ===
-    // Prints the character value to the console
-    println(char)
+    // Print the character to the console
+    println(char) // Output: ?
+
+    // === Notes & Tips ===
+    // - Use Char when you need to represent single characters.
+    // - For multiple characters (strings), use the String type instead.
 }

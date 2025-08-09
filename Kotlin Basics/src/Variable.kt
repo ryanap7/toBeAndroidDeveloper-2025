@@ -26,4 +26,11 @@ fun main() {
     println("Age: $age")
     println("Address: $address")
     println("App Version: $VERSION")
+
+    // === Notes & Tips ===
+    // - Use 'const val' for compile-time constants declared outside functions.
+    // - Use 'var' for variables that need to be reassigned.
+    // - Use 'val' for variables that should be assigned once (immutable reference).
+    // - Use nullable types (with '?') to allow variables to hold null values.
+    // - Avoid null when possible to prevent NullPointerExceptions.
 }

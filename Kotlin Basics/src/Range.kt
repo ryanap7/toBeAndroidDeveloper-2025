@@ -1,7 +1,9 @@
 fun main() {
     // === Range in Kotlin ===
+    // Definition:
     // A range represents a sequence of values between a start and an end value (inclusive).
     // The ".." operator creates an increasing range.
+
     val range = 1..100 // Numbers from 1 to 100
 
     // === Common Range Operations ===
@@ -19,7 +21,13 @@ fun main() {
     // The "step" function specifies the increment/decrement between each value in the range.
     val numbers = 100 downTo 0 step 10 // 100, 90, 80, ..., 0
 
-    // Printing the range object will show its progression type (not the actual numbers).
-    // To display all elements, convert it to a list: numbers.toList()
-    println(numbers.toList())
+    // Printing the range object shows its type, not all elements.
+    // Use toList() to display all elements.
+    println(numbers.toList()) // Output: [100, 90, 80, 70, 60, 50, 40, 30, 20, 10, 0]
+
+    // === Notes & Tips ===
+    // - Use ranges for loops or conditional checks involving sequences.
+    // - Use 'downTo' for decreasing sequences.
+    // - Use 'step' to skip values within the range.
+    // - Convert ranges to lists when you need to work with all elements explicitly.
 }

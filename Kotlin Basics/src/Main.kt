@@ -1,9 +1,15 @@
 fun main() {
-    // === Entry Point ===
-    // 'main' function is the starting point of a Kotlin application.
-    // The code inside this function will be executed first when the program runs.
+    // === Entry Point in Kotlin ===
+    // Definition:
+    // The 'main' function is the starting point of a Kotlin application.
+    // When the program runs, the code inside this function is executed first.
 
     // === Printing to Console ===
-    // 'println()' is used to print a message followed by a new line.
-    println("Hello, World!") // This prints "Hello, World!" to the console
+    // 'println()' prints a message to the console followed by a new line.
+
+    println("Hello, World!") // Output: Hello, World!
+
+    // === Notes & Tips ===
+    // - Every Kotlin program must have a 'main' function as the entry point.
+    // - Use 'println()' to output information or debug messages.
 }

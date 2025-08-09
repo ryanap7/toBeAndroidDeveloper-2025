@@ -1,33 +1,29 @@
 fun main() {
-    // === Creating an Array ===
-    // An Array in Kotlin is a fixed-size collection that can store elements of the same type.
-    // Here, we create an Array of Strings with two initial elements.
-    val names: Array<String> = arrayOf("Ryan", "Aprianto")
-
-    // === Accessing Elements in an Array ===
+    // === Arrays in Kotlin ===
+    // Definition:
+    // An Array is a fixed-size collection that stores multiple elements of the same type.
+    // It can store both primitive types (Int, Double, Boolean, etc.) and objects.
     // Arrays in Kotlin are zero-indexed, meaning the first element is at index 0.
-    // Common operations:
-    // - size: Returns the number of elements in the array.
-    // - get(index): Retrieves the element at the given index.
-    // - [index]: Shorthand to get the element at the given index.
-    // - set(index, value): Replaces the element at the given index with a new value.
-    // - [index] = value: Shorthand to set a new value at a given index.
 
-    // Updating the element at index 1 (second element)
-    names[1] = "Ryan Aprianto"
+    // Usage:
+    // Use arrays when you know the number of elements will not change.
+    // Suitable for storing data in a fixed-length sequence.
 
-    // Printing the element at index 1
+    // === Example 1: Creating and Modifying an Array ===
+    val names: Array<String> = arrayOf("Ryan", "Aprianto") // Create an Array of Strings
+    names[1] = "Ryan Aprianto" // Update element at index 1
     println(names[1]) // Output: Ryan Aprianto
 
-    // === Nullable Array Elements ===
-    // Here, we create an Array that can store nullable Integers (Int?).
-    // This means each element can either be an Int or null.
-    // arrayOfNulls(size) creates an array of the given size filled with null values.
-    val balances: Array<Int?> = arrayOfNulls(5)
-
-    // Assigning a value to the first element (index 0)
-    balances[0] = 1000
-
-    // Printing the element at index 0
+    // === Example 2: Nullable Array Elements ===
+    // You can create an Array with nullable elements using arrayOfNulls(size).
+    // This initializes all positions with null values.
+    val balances: Array<Int?> = arrayOfNulls(5) // Create an Array of nullable Integers
+    balances[0] = 1000 // Assign value to the first index
     println(balances[0]) // Output: 1000
+
+    // === Notes & Tips ===
+    // - Arrays have a fixed size. You cannot directly add or remove elements.
+    // - For collections that can grow or shrink, use List or MutableList instead.
+    // - Accessing an index out of bounds will throw an IndexOutOfBoundsException.
+    // - Use loops (for, forEach) to iterate through array elements.
 }

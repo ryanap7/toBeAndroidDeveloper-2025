@@ -1,22 +1,25 @@
 fun main() {
-    // If Expression
-    // The if expression in Kotlin is used to execute code based on conditions.
-    // It can have one or multiple branches (if, else if, else).
+    // === If Expression in Kotlin ===
+    // Definition:
+    // The 'if' expression is used to execute code conditionally.
+    // It can have multiple branches: if, else if, and else.
+    // In Kotlin, 'if' is an expression, meaning it returns a value.
 
     val score = 90
 
+    // Example: Using if-else for branching logic
     if (score > 80) {
-        // This block will run if score is greater than 80
+        // Runs if score is greater than 80
         println("Excellent")
     } else if (score > 70) {
-        // This block will run if score is not greater than 80 but greater than 70
+        // Runs if score is not greater than 80 but greater than 70
         println("Not Bad")
     } else {
-        // This block will run if all previous conditions are false
+        // Runs if all above conditions are false
         println("Try again later!")
     }
 
-    // In Kotlin, 'if' can also return a value, making it an expression
+    // Example: Using if as an expression that returns a value
     val performance = if (score > 80) {
         "Excellent"
     } else if (score > 70) {
@@ -25,5 +28,9 @@ fun main() {
         "Try again later!"
     }
 
-    println("Performance: $performance")
+    println("Performance: $performance") // Output: Performance: Excellent
+
+    // === Notes & Tips ===
+    // - Use if expressions when you want to select between multiple conditions.
+    // - Because 'if' returns a value, you can assign its result directly to a variable.
 }

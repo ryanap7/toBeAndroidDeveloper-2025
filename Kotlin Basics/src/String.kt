@@ -1,12 +1,13 @@
 fun main() {
 
-    // === String Values ===
-    // A String is a sequence of characters. Use double quotes ("") to declare a string.
+    // === String Values in Kotlin ===
+    // Definition:
+    // A String is a sequence of characters enclosed in double quotes ("").
     val firstname: String = "Ryan"
     val lastname: String = "Aprianto"
 
     // === Multiline Strings ===
-    // Use triple quotes (""") to create a string that spans multiple lines.
+    // Use triple quotes (""") to create strings spanning multiple lines.
     val simpleAddress: String = """
         Jl. Merdeka No. 123,
         Cirebon City,
@@ -15,7 +16,7 @@ fun main() {
     """
 
     // === trimMargin() with Default Margin ('|') ===
-    // Use '|' as a margin prefix and trim it using trimMargin()
+    // Use '|' as margin prefix and remove it with trimMargin()
     val formattedAddress: String = """
         |Ryan Aprianto
         |Jl. Merdeka No. 123
@@ -24,24 +25,30 @@ fun main() {
     """.trimMargin()
 
     // === trimMargin() with Custom Margin ('>') ===
-    // You can use any custom character as the margin prefix
+    // Any character can be used as margin prefix in trimMargin()
     val profileDescription: String = """
         >Hello, my name is Ryan Aprianto.
         >I'm a software developer who enjoys working with Kotlin.
         >This is a sample of a well-formatted multiline string using '>'.
     """.trimMargin(">")
 
-    // === String Template ===
-    // Kotlin supports string interpolation using the '$' symbol
+    // === String Templates ===
+    // Kotlin supports string interpolation with '$'
     val fullName: String = "$firstname $lastname"
 
-    // You can also use expressions in templates with ${...}
+    // Expressions can be included with ${...}
     val description: String = "$fullName has ${fullName.length} characters"
 
     // === Output ===
-    println(simpleAddress)       // Basic multiline string without trimming
-    println(formattedAddress)    // Multiline string using trimMargin('|')
-    println(profileDescription)  // Multiline string using trimMargin('>')
-    println(fullName)            // Interpolated full name
-    println(description)         // Full name with character count
+    println(simpleAddress)       // Prints basic multiline string
+    println(formattedAddress)    // Prints trimmed multiline string with '|'
+    println(profileDescription)  // Prints trimmed multiline string with '>'
+    println(fullName)            // Prints interpolated full name
+    println(description)         // Prints full name with character count
+
+    // === Notes & Tips ===
+    // - Use triple quotes for multiline strings to maintain formatting.
+    // - Use trimMargin() to remove unwanted indentation in multiline strings.
+    // - String templates simplify concatenation and embedding expressions.
+    // - Use ${} for complex expressions inside string templates.
 }
