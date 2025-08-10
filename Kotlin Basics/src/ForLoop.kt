@@ -1,7 +1,14 @@
 fun main() {
     // === For Loops in Kotlin ===
+
     // Definition:
-    // The 'for' loop is used to iterate over a range, array, collection, or any iterable object.
+    // The 'for' loop in Kotlin is used to iterate over a range, array, collection,
+    // or any object that provides an iterator.
+
+    // Usage:
+    // for (item in collection) {
+    //     // code to execute for each item
+    // }
 
     // Example 1: Iterating over an Array
     val values: Array<Int> = arrayOf(1, 2, 3, 4, 5)
@@ -18,7 +25,12 @@ fun main() {
         println(value)
     }
 
-    // === Notes & Tips ===
+    // How It Works:
+    // - The 'for' loop takes each element from the iterable object (array, range, etc.).
+    // - The variable (e.g., 'value') holds the current element in each iteration.
+    // - The loop continues until all elements have been processed.
+
+    // Notes & Tips:
     // - '1..100' creates a closed range including both 1 and 100.
     // - Use 'until' to exclude the upper bound, e.g., '1 until 100' iterates from 1 to 99.
     // - Use 'downTo' to iterate in descending order, e.g., '5 downTo 1'.

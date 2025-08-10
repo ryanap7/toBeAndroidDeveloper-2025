@@ -1,36 +1,42 @@
-// === Constant Variable ===
-// 'const val' is used for compile-time constants.
-// Must be declared at the top level (outside any function).
-// The value must be assigned at declaration and cannot be changed later.
+// === Constant and Variable Declaration in Kotlin ===
+
+// Definition
+// 'const val' declares compile-time constants that must be initialized at declaration and cannot change.
+// 'var' declares mutable variables whose values can be reassigned.
+// 'val' declares immutable variables which can be assigned only once.
+// Nullable variables are declared by appending '?' to the type, allowing them to hold null.
+
+// Usage
+// Use 'const val' for fixed values known at compile time, declared at the top level.
+// Use 'var' when you expect the value to change over time.
+// Use 'val' when you want a read-only reference after initialization.
+// Use nullable types to represent variables that may have no value (null).
+
+// Example
 const val VERSION: String = "1.0"
 
 fun main() {
+    var name: String = "Ryan"      // Mutable variable
+    name = "Ryan Aprianto"         // Value reassigned
 
-    // === Mutable Variable ===
-    // Declared with 'var' → the value can be reassigned later.
-    var name: String = "Ryan" // Initial value
-    name = "Ryan Aprianto"    // Value changed (mutable)
+    val age: Int = 18              // Immutable variable
 
-    // === Immutable Variable ===
-    // Declared with 'val' → read-only reference.
-    // The value can only be assigned once, but the object it refers to can still be mutable.
-    val age: Int = 18
+    val address: String? = null    // Nullable variable
 
-    // === Nullable Variable ===
-    // Adding '?' after the type means the variable can store 'null'.
-    // Without '?', variables cannot hold null values (non-null by default in Kotlin).
-    val address: String? = null
-
-    // === Output ===
     println("Name: $name")
     println("Age: $age")
     println("Address: $address")
     println("App Version: $VERSION")
-
-    // === Notes & Tips ===
-    // - Use 'const val' for compile-time constants declared outside functions.
-    // - Use 'var' for variables that need to be reassigned.
-    // - Use 'val' for variables that should be assigned once (immutable reference).
-    // - Use nullable types (with '?') to allow variables to hold null values.
-    // - Avoid null when possible to prevent NullPointerExceptions.
 }
+
+// How It Works
+// - 'const val' must be declared outside functions and initialized immediately.
+// - 'var' variables can be reassigned any number of times.
+// - 'val' variables cannot be reassigned after initialization.
+// - Nullable types allow 'null' but require safe handling to avoid errors.
+
+// Notes & Tips
+// - Prefer 'val' over 'var' when reassignment is not needed to ensure immutability.
+// - Use 'const val' for global constants for performance and clarity.
+// - Avoid null where possible to reduce runtime exceptions.
+// - Use Kotlin's null-safety features to handle nullable types safely.

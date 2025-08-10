@@ -1,35 +1,40 @@
 fun main() {
     // === Comparison Operators in Kotlin (>=, <=, >, <, ==, !=) ===
-    // Definition:
-    // Comparison operators compare two values and return a Boolean result: true or false.
     //
-    // Common operators:
+    // Definition:
+    // Comparison operators are used to compare two values and return a Boolean result (true or false).
+    //
+    // Usage:
     // - >= : greater than or equal to
     // - <= : less than or equal to
     // - >  : greater than
     // - <  : less than
     // - == : equal to
     // - != : not equal to
-
+    //
+    // Example:
     val a = 100
     val b = 200
 
-    // Example: Check if 'a' is less than or equal to 'b'
     // 100 <= 200 → true because 100 is less than 200
     val isLessOrEqual: Boolean = a <= b
     println(isLessOrEqual) // Output: true
 
-    // Example: Check if 'a' is equal to 'b'
     // 100 == 200 → false because they are different
     val isEqual: Boolean = a == b
     println(isEqual) // Output: false
 
-    // Example: Check if 'a' is not equal to 'b'
     // 100 != 200 → true because they are different
     val isNotEqual: Boolean = a != b
     println(isNotEqual) // Output: true
-
-    // === Notes & Tips ===
-    // - Use comparison operators in conditional statements to control program flow.
-    // - The result of any comparison is always a Boolean.
+    //
+    // How It Works:
+    // - The operator compares the left-hand value with the right-hand value.
+    // - The expression evaluates to a Boolean (`true` or `false`).
+    // - Example: a <= b → checks if 'a' is less than or equal to 'b'.
+    //
+    // Notes & Tips:
+    // - Use comparison operators in if-else statements or loops to control logic flow.
+    // - Comparison results can be stored in variables for later use.
+    // - Works with numbers, characters, and other comparable data types.
 }

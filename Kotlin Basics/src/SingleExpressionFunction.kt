@@ -1,16 +1,25 @@
 // === Single Expression Function in Kotlin ===
-// A function that consists of only one expression can be written in a shorter form using '='
-// The return type can be explicitly stated or inferred by Kotlin.
 
+// Definition
+// A function with a single expression can be written using '=' for brevity.
+// The return type can be explicit or inferred.
+
+// Usage
+// Use single expression functions for simple, concise operations.
+
+// Example
 fun multiply(a: Int, b: Int): Int = a * b // Returns the product of two integers
 
 fun main() {
-    // === Calling a single expression function ===
-    val result = multiply(5, 5) // Store the returned value in a variable
-
-    println(result) // Output: 25
-
-    // === Notes & Tips ===
-    // - Single expression functions improve readability for simple logic.
-    // - Keep them concise; use block functions for complex operations.
+    val result = multiply(5, 5) // Call the function and store the result
+    println(result)             // Output: 25
 }
+
+// How It Works
+// - The function body is replaced by a single expression after '='.
+// - Kotlin infers the return type if not explicitly declared.
+// - This syntax is ideal for small, straightforward functions.
+
+// Notes & Tips
+// - Use single expression functions to keep code concise and readable.
+// - For complex logic, prefer block body functions with curly braces.

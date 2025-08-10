@@ -1,18 +1,24 @@
 // === Function with Default Parameters in Kotlin ===
-// Functions can have default values for parameters.
-// If no argument is passed, the default value is used.
+// Definition: A function can have default values for parameters.
+//   When no argument is provided for such a parameter, the default value is used.
 
+// Usage: Useful when some arguments are optional, so the caller doesn't need to pass all parameters.
+
+// Example:
 fun hello(firstName: String, lastName: String = "") {
     println("Hello $firstName $lastName")
 }
 
 fun main() {
-    // === Calling function with only one argument ===
-    // 'lastName' uses its default value of empty string
-    hello("Ryan") // Output: Hello Ryan 
-
-    // === Notes & Tips ===
-    // - Default parameters simplify function calls when some arguments are optional.
-    // - You can override default values by providing arguments.
-    // - Use default parameters to avoid method overloads.
+    hello("Ryan") // Output: Hello Ryan
+    hello("Ryan", "Aprianto") // Output: Hello Ryan Aprianto
 }
+
+// How It Works:
+//   1. The `lastName` parameter has a default value of an empty string.
+//   2. When calling `hello("Ryan")`, `lastName` uses the default value.
+//   3. When calling `hello("Ryan", "Aprianto")`, `lastName` is overridden.
+// Notes & Tips:
+//   - Default parameters reduce the need for method overloading.
+//   - Defaults can be any constant or computed value.
+//   - Parameters with defaults must come after non-default parameters.

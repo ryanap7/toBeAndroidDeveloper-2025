@@ -1,22 +1,27 @@
 fun main() {
     // === Boolean in Kotlin ===
+
     // Definition:
-    // A Boolean in Kotlin is a data type that can only hold one of two values: true or false.
-    //
+    // A Boolean in Kotlin is a primitive data type that can only have one of two values: true or false.
+
     // Usage:
-    // Commonly used in conditions, logical operations, and control flow statements.
-    // Boolean literals must be written in lowercase: true and false.
+    // Booleans are commonly used in conditions, logical operations, and controlling program flow.
+    // Boolean literals are written in lowercase: true and false.
 
     // Example:
-    val correct: Boolean = true   // Declares a Boolean variable with value 'true'
-    val wrong: Boolean = false    // Declares a Boolean variable with value 'false'
+    val correct: Boolean = true    // Declares a Boolean variable with value 'true'
+    val wrong: Boolean = false     // Declares a Boolean variable with value 'false'
 
-    // Output:
     println(correct) // Output: true
     println(wrong)   // Output: false
 
-    // === Notes & Tips ===
-    // - Use Booleans to control program flow (if, while, when).
-    // - Remember that Boolean variables only store true or false, never other values.
-    // - Booleans can be the result of a comparison, e.g., (5 > 3) will return true.
+    // How It Works:
+    // - Boolean variables store logical states.
+    // - They can be assigned directly with true/false or as the result of expressions.
+    // - For example: val isGreater = (5 > 3) // true
+
+    // Notes & Tips:
+    // - Use Booleans with if, while, when, etc., to control program behavior.
+    // - Avoid comparing Boolean with true/false directly, prefer: if (isActive) { ... }
+    // - Boolean operations include: && (AND), || (OR), ! (NOT).
 }

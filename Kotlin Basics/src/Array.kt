@@ -1,29 +1,35 @@
 fun main() {
     // === Arrays in Kotlin ===
+
     // Definition:
-    // An Array is a fixed-size collection that stores multiple elements of the same type.
-    // It can store both primitive types (Int, Double, Boolean, etc.) and objects.
-    // Arrays in Kotlin are zero-indexed, meaning the first element is at index 0.
+    // An Array in Kotlin is a fixed-size collection that stores multiple elements of the same type.
+    // Arrays can hold primitive types (Int, Double, Boolean, etc.) or objects.
+    // Arrays are zero-indexed: the first element is at index 0.
 
     // Usage:
-    // Use arrays when you know the number of elements will not change.
-    // Suitable for storing data in a fixed-length sequence.
+    // Use arrays when you know the number of elements will remain constant.
+    // Suitable for storing sequential data that doesn't change in size.
 
-    // === Example 1: Creating and Modifying an Array ===
+    // Example 1: Creating and Modifying an Array
     val names: Array<String> = arrayOf("Ryan", "Aprianto") // Create an Array of Strings
-    names[1] = "Ryan Aprianto" // Update element at index 1
+    names[1] = "Ryan Aprianto" // Update the second element
     println(names[1]) // Output: Ryan Aprianto
 
-    // === Example 2: Nullable Array Elements ===
-    // You can create an Array with nullable elements using arrayOfNulls(size).
-    // This initializes all positions with null values.
-    val balances: Array<Int?> = arrayOfNulls(5) // Create an Array of nullable Integers
-    balances[0] = 1000 // Assign value to the first index
+    // Example 2: Nullable Array Elements
+    // Create an Array that can store null values
+    val balances: Array<Int?> = arrayOfNulls(5) // All elements initially null
+    balances[0] = 1000 // Assign a value to the first index
     println(balances[0]) // Output: 1000
 
-    // === Notes & Tips ===
-    // - Arrays have a fixed size. You cannot directly add or remove elements.
-    // - For collections that can grow or shrink, use List or MutableList instead.
-    // - Accessing an index out of bounds will throw an IndexOutOfBoundsException.
-    // - Use loops (for, forEach) to iterate through array elements.
+    // How It Works:
+    // - arrayOf(...) creates an Array with the given elements.
+    // - arrayOfNulls(size) creates an Array of the specified size filled with null.
+    // - Elements are accessed or updated using [index] notation.
+    // - Indexing starts at 0, so names[1] refers to the second element.
+
+    // Notes & Tips:
+    // - Arrays have a fixed size — you cannot add or remove elements.
+    // - For dynamic collections, use List or MutableList.
+    // - Accessing an invalid index will throw IndexOutOfBoundsException.
+    // - Iterate over arrays using loops (for, forEach, indices).
 }

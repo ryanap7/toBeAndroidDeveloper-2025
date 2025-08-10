@@ -1,57 +1,54 @@
+// === Number Types in Kotlin ===
+
+// Definition
+// Kotlin provides several numeric types to represent integer and floating-point numbers,
+// each with a specific size and range.
+
+// Usage
+// Use appropriate numeric types depending on the range and precision you need.
+// Use explicit conversions when changing between numeric types.
+
+// Example
 fun main() {
-    // === Integer Numbers ===
-    // Byte: 8-bit signed integer (-128 to 127)
-    val age: Byte = 27
+    // Integer Types
+    val age: Byte = 27                    // 8-bit signed integer (-128 to 127)
+    val height: Int = 169                 // 32-bit signed integer (default for integers)
+    val distance: Short = 2000            // 16-bit signed integer (-32,768 to 32,767)
+    val balance: Long = 1_000_000L       // 64-bit signed integer (use 'L' suffix)
 
-    // Int: 32-bit signed integer (default type for integers)
-    val height: Int = 169
+    // Floating-Point Types
+    val value: Float = 3.14F              // 32-bit floating point (use 'F' suffix)
+    val radius: Double = 20.0             // 64-bit floating point (default for decimals)
 
-    // Short: 16-bit signed integer (-32,768 to 32,767)
-    val distance: Short = 2000
+    // Number Literals
+    val decimalLiteral: Int = 100         // Decimal (base 10)
+    val hexadecimalLiteral: Int = 0xFF    // Hexadecimal (base 16), equals 255 decimal
+    val binaryLiteral: Int = 0b0001       // Binary (base 2), equals 1 decimal
 
-    // Long: 64-bit signed integer. Use 'L' suffix to declare Long literal
-    val balance: Long = 1_000_000L
+    // Using Underscores for Readability
+    val price: Long = 1_000_000_000L      // Underscores improve readability
 
-    // === Floating Point Numbers ===
-    // Float: 32-bit floating point number. Use 'F' suffix
-    val value: Float = 3.14F
-
-    // Double: 64-bit floating point number (default type for decimals)
-    val radius: Double = 20.0
-
-    // === Number Literals ===
-    // Decimal literal (base 10)
-    val decimalLiteral: Int = 100
-
-    // Hexadecimal literal (base 16), prefix with '0x'
-    val hexadecimalLiteral: Int = 0xFF // 255 in decimal
-
-    // Binary literal (base 2), prefix with '0b'
-    val binaryLiteral: Int = 0b0001 // 1 in decimal
-
-    // === Using Underscores for Readability ===
-    // Kotlin allows underscores to make large numbers more readable
-    val price: Long = 1_000_000_000L
-
-    // === Number Conversion ===
-    // Kotlin does NOT automatically convert between different number types.
-    // Use explicit conversion functions like toByte(), toInt(), toFloat(), etc.
+    // Number Conversion (explicit)
     val number: Int = 11
+    val byte: Byte = number.toByte()           // Convert Int to Byte
+    val integer: Int = number.toInt()           // Convert Int to Int (no-op)
+    val short: Short = number.toShort()         // Convert Int to Short
+    val long: Long = number.toLong()            // Convert Int to Long
+    val float: Float = number.toFloat()         // Convert Int to Float
+    val double: Double = number.toDouble()      // Convert Int to Double
 
-    val byte: Byte = number.toByte()     // Converts Int to Byte
-    val integer: Int = number.toInt()    // Converts Int to Int (no-op)
-    val short: Short = number.toShort()  // Converts Int to Short
-    val long: Long = number.toLong()     // Converts Int to Long
-    val float: Float = number.toFloat()  // Converts Int to Float
-    val double: Double = number.toDouble() // Converts Int to Double
-
-    // === Output ===
-    // Prints the Long value stored in 'balance' to the console
+    // Output
     println(balance) // Output: 1000000
-
-    // === Notes & Tips ===
-    // - Use the smallest numeric type that fits your data to optimize memory usage.
-    // - Remember to append 'L' for Long literals and 'F' for Float literals.
-    // - Use underscores (_) in numeric literals for better readability.
-    // - Kotlin requires explicit conversion between numeric types; no implicit widening.
 }
+
+// How It Works
+// - Kotlin numeric types have fixed sizes and ranges.
+// - Use suffixes 'L' for Long and 'F' for Float literals.
+// - Underscores (_) can be used inside numeric literals for clarity.
+// - Kotlin does not do implicit widening conversions; explicit conversion is required.
+
+// Notes & Tips
+// - Use the smallest type that fits your data to save memory.
+// - Always append suffixes for Long and Float literals.
+// - Use explicit conversion functions to convert between types safely.
+// - Underscores in numeric literals improve code readability.
