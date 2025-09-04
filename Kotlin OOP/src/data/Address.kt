@@ -1,3 +1,7 @@
 package data
 
-class Address
+class Address {
+    var street: String = ""
+    var city: String = ""
+    var county: String = "Indonesia"
+}
