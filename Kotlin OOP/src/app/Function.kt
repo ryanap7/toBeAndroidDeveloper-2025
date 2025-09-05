@@ -10,6 +10,7 @@ fun main() {
     person.lastName = "Michael"
 
     person.sayHello("Ryan")
+    person.sayHello("Ryan", "Aprianto")
     val fullName = person.getFullName()
 
     print(fullName)
